@@ -17,7 +17,12 @@ $$ EAR = \frac{\left\|p_2 - p_6 \right\| + \left\|p_3 - p_5 \right\|}{2\left\|p_
 $\left\| \right\|$ - Euclidean distance giữa 2 điểm (có thể build lại hoặc dùng thư viện cho nhanh như `scipy`).
 Nhận thấy khi mắt mở giá trị của EAR gần như không đổi quanh một ngưỡng nào đó (trên hình khoảng 0.25), khi mắt nhắm EAR giảm xuống (cần set ngưỡng). Nếu mắt nhắm trong thời gian đủ lâu chúng ta sẽ phát cảnh báo cho tài xế. Thêm nữa do mỗi người có hai mắt nên ta sẽ lấy giá trị trung bình của 2 mắt cho EAR (người bị thiếu một mắt chắc không đủ điều kiện lái xe). Cần test cả mode cho trường hợp lái xe đeo kính (đeo kính râm đen thì khó).
 
+Mình xin tóm lại các bước chính như sau:
+* **Bước 1:** Detect khuôn mặt
+* **Bước 2:** Xác định facial landmarks dựa trên khuôn mặt đã detect được ở bước 1
+* **Bước 3:** Xác định EAR (eye aspect ration) cho 2 mắt (lấy gá trị trung bình)
+* **Bước 4:** Kiểm tra điều kiệm cảnh cáo nếu có.
 
-
+Source code các bạn có thể xem tại [github-huytranvan2010](https://github.com/huytranvan2010/Drowsiness-Detection), mình có comment rất chi tiết các dòng lệnh.
 
 
